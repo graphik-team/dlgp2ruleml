@@ -76,11 +76,12 @@ public class DLGP2RuleML {
 		}
 
 		// MAIN
-		for (Object o : parser) {
+		while(parser.hasNext()) {
+			Object o = parser.next();
 			writer.write(o);
 		}
 		writer.close();
-
+		parser.close();
 	}
 	
 
